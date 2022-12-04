@@ -3766,9 +3766,6 @@ html[dir="ltr"] .btn_addToCart {
 .checkbox-edit {
   margin-bottom: 20px;
 }
-.Reset-btn {
-  margin: unset;
-}
 .checkbox-edit .form__radio-group {
   display: flex;
   align-items: center;
