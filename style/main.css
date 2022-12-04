@@ -2720,6 +2720,9 @@ html[dir="ltr"] .sidebar_ .ul_sidebar li .anc_sidebar {
   font-size: 24px;
   color: #ffffff;
 }
+.address_section .item_address .btn_group_ .btn_address:last-of-type{
+  margin: 0;
+}
 
 .btn_color1 {
   background-color: #6adf88;
@@ -3877,6 +3880,9 @@ html[dir="ltr"] .btn_addToCart {
 @media only screen and (max-width: 767px) {
   .address-box {
     padding: 60px 15px;
+  }
+  .address-box .address_section .item_address{
+    padding: 15px;
   }
 }
 .address-box .close_address-box {
