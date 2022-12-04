@@ -3863,7 +3863,7 @@ html[dir="ltr"] .btn_addToCart {
 
 /*pop up*/
 .address-box {
-  position: absolute;
+  position: fixed;
   top: 60px;
   bottom: 60px;
   left: 50%;
