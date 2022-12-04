@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" />
+  <link rel="icon" href="images/favicon.png" type="image/png" />
+  <link rel="stylesheet" href="style/animate.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="style/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+  <link rel="stylesheet" href="style/main.css" />
+  <title>INK | Home</title>
+</head>
+
+<body>
+  <!-- preload progress -->
+  <div class="progress_preload">
+    <div class="progress" id="progress_div">
+      <div class="bar" id="bar1"></div>
+    </div>
+    <input type="hidden" id="progress_width" value="0" />
+  </div>
+  <div class="login-popup-parant">
+    <i class="las la-times close_login"></i>
+    <div class="login-popup">
+      <h3 class="m_P_gh">sign in</h3>
+      <form>
+        <div class="form-group">
+          <label> Mobile number</label>
+          <div class="input_parant">
+            <input type="text" placeholder="5xxxxxxxx">
+            <span>
+              996+
+              <img src="images/lang-login.png" alt="">
+            </span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>password</label>
+          <div class="input_parant">
+            <input type="password" class="password_change">
+            <span>
+              <button class="btn_gh btn_show_pass">
+                <i class="las la-eye e_block"></i>
+                <i class="las la-low-vision e_none"></i>
+              </button>
+            </span>
+          </div>
+        </div>
+      </form>
+      <a href="#" class="forget_pass anc_gh">Forgot your password?</a>
+      <!-- <button class="btn_login btn_gh effects_2">Login</button> -->
+      <a href="./profile-en.html" class="btn_login btn_gh anc_gh effects_2">Login</a>
+
+      <div class="login-now">
+        Don't have an account?
+        <a href="register-en.html" class="login-now-anc anc_gh">Register</a>
+      </div>
+    </div>
+  </div>
+  <div class="moboverlay"></div>
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~start header~~~~~~~~~~~~~~~~~~~~~ -->
+  <header>
+    <div class="container">
+      <div class="header">
+        <div class="logo">
+          <a href="en.html" class="anc_logo">
+            <figure>
+              <img src="images/logo.png" alt="logo" />
+            </figure>
+          </a>
+        </div>
+        <div class="input-serch-div-parant">
+          <div class="input-serch-div">
+            <input type="text" placeholder="What are you searching for?">
+            <button class="btn_gh btn_serach"><i class="la la-search"></i></i></button>
+          </div>
+        </div>
+
+        <div class="user-shoping">
+          <button class="btn_bars btn_gh"><i class="la la-bars"></i></button>
+          <button class="btn_gh btn-search-mobile"><i class="la la-search"></i></button>
+          <button class="btn_gh btn_user_"><i class="las la-user"></i></button>
+          <a href="cart.html" class="anc_gh anc_cart btn-cart">
+            <i class="las la-shopping-cart"></i>
+            <span>5</span>
+          </a>
+          <a href="index.html" class="anc_lang anc_gh">
+            العربية
+          </a>
+          <a href="register-en.html" class="anc_designer_regis effects_ anc_gh">designer registr</a>
+        </div>
+      </div>
+
+    </div>
+    <nav class="nav">
+      <button class="btn_close_nav btn_gh"><i class="las la-times"></i></button>
+      <ul class="ul_gh ul_nav">
+        <li><a href="#" class="anc_gh anc_nav b_red ">bestseller</a></li>
+        <li><a href="#" class="anc_gh anc_nav b_red "> New Arrival</a></li>
+        <li class="action_menu">
+          <a href="#" class="anc_gh anc_nav"> men </a>
+          <ul class="ul_menu ul_gh">
+            <li><a href="Category-en.html" class="anc_gh anc_menu"> T-shirts T-shirts T-shirts T-shirts</a></li>
+            <li><a href="#" class="anc_gh anc_menu">hoodies</a></li>
+            <li><a href="#" class="anc_gh anc_menu">hoodies</a></li>
+          </ul>
+        </li>
+        <li class="action_menu">
+          <a href="#" class="anc_gh anc_nav"> women </a>
+          <ul class="ul_menu ul_gh">
+            <li><a href="#" class="anc_gh anc_menu"> T shirts</a></li>
+            <li><a href="#" class="anc_gh anc_menu">hoodies</a></li>
+            <li><a href="#" class="anc_gh anc_menu">hoodies</a></li>
+          </ul>
+        </li>
+        <li class="action_menu">
+          <a href="#" class="anc_gh anc_nav"> kids </a>
+          <ul class="ul_menu ul_gh">
+            <li><a href="#" class="anc_gh anc_menu"> T shirts</a></li>
+            <li><a href="#" class="anc_gh anc_menu">hoodies</a></li>
+            <li><a href="#" class="anc_gh anc_menu">hoodies</a></li>
+          </ul>
+        </li>
+        <li class="action_menu">
+          <a href="#" class="anc_gh anc_nav"> collectibles </a>
+          <ul class="ul_menu ul_gh">
+            <li><a href="#" class="anc_gh anc_menu"> T shirts</a></li>
+            <li><a href="#" class="anc_gh anc_menu">hoodies</a></li>
+            <li><a href="#" class="anc_gh anc_menu">hoodies</a></li>
+          </ul>
+        </li>
+        <li><a href="#" class="anc_gh anc_nav">about us</a></li>
+        <li><a href="faq-en.html" class="anc_gh anc_nav"> FAQ</a></li>
+        <li><a href="contact-us-en.html" class="anc_gh anc_nav">contact us</a></li>
+        <li><a href="index.html" class="anc_gh anc_nav anc_lang"> العربية</a></li>
+
+      </ul>
+    </nav>
+  </header>
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~end header~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~start main~~~~~~~~~~~~~~~~~~~~~~~ -->
+  <main class="section_main wow fadeInDown">
+    <div class="slider">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="item-slider">
+              <a href="#" class="anc_gh anc_slider">
+                <img src="images/slider.png" alt="">
+              </a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="item-slider">
+              <a href="#" class="anc_gh anc_slider">
+                <img src="images/slider.png" alt="">
+              </a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="item-slider">
+              <a href="#" class="anc_gh anc_slider">
+                <img src="images/slider.png" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next">
+        <i class="la la-angle-right"></i>
+      </div>
+      <div class="swiper-button-prev">
+        <i class="la la-angle-left"></i>
+      </div>
+    </div>
+  </main>
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~end main~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~start about~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+  <section class="about_section wow fadeInDown">
+    <div class="container">
+      <div class="about">
+        <div class="item_about wow pulse">
+          <h3 class="about_title_item m_P_gh">About INK</h3>
+          <p class="m_P_gh p_about_item">A Saudi-origin online store, specializing in the sale of printing supplies such
+            as
+            T-shirts, articles,
+            stickers
+            And others.., and also provides services
+            Printing on these products, and the designs of a large number of designers are also marketed.</p>
+        </div>
+        <div class="item_about wow pulse">
+          <h3 class="about_title_item m_P_gh">Our vision & mission</h3>
+          <p class="m_P_gh p_about_item">Provide better service to customers with high quality products, designs and
+            manufacture, and provide a platform
+            It makes it easier for designers to market their designs, and be
+            The INK store is the most famous in the Kingdom and is expanding to the Middle East.</p>
+        </div>
+        <div class="item_about wow pulse">
+          <h3 class="about_title_item m_P_gh">Be a designer..</h3>
+          <p class="m_P_gh p_about_item"> Register a designer account in the store and display your wonderful designs
+            within
+            our products, and get
+            wider spread
+            More designs and profits.</p>
+          <a href="register-en.html" class="anc_designer_regis effects_ anc_gh">designer registr</a>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~end about~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~start new~~~~~~~~~~~~~~~~~~~~~~ -->
+  <section class="new_section wow fadeInDown">
+    <img src="images/Shape-new.png" alt="" class="shape_n">
+    <h3 class="title_main">
+      New Arrival
+    </h3>
+    <div class="container">
+      <div class="new">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="new-d_none_mob">
+              <div class="swiper-slide">
+                <div class="product_item">
+                  <div class="product_img_div">
+                    <a href="#" class="anc_item_product anc_gh">
+
+                      <img src="images/projects/1.png" alt="">
+                    </a>
+                    <button class="btn_gh btn_fav">
+                      <i class="lar la-heart"></i>
+                    </button>
+                  </div>
+                  <div class="product_content">
+                    <a href="product-en.html" class="product_title anc_gh"> 100% Cotton Plain Hood T-Shirt For
+                      Unisex</a>
+
+                    <p class="product_price m_P_gh">55 R.S</p>
+                    <div class="product_size_parant">
+                      <span>S</span>
+                      -
+                      <span>M</span>
+                      -
+                      <span>L</span>
+                      -
+                      <span>XL</span>
+                      -
+                      <span>XXL</span>
+                    </div>
+                    <div class="product_color_parant">
+                      <span style="background-color: #474747"></span>
+                      <span style="background-color: #f82d2d"></span>
+                      <span style="background-color: #002aff"></span>
+                      <span style="background-color: #4fd52b"></span>
+                      <span style="background-color: #38cac1"></span>
+                      <span style="background-color: #f6e23e"></span>
+                      <span style="background-color: #ffffff"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product_item">
+                  <div class="product_img_div">
+                    <a href="#" class="anc_item_product anc_gh">
+
+                      <img src="images/projects/2.png" alt="">
+                    </a>
+                    <button class="btn_gh btn_fav">
+                      <i class="lar la-heart"></i>
+                    </button>
+                  </div>
+                  <div class="product_content">
+                    <a href="product-en.html" class="product_title anc_gh"> Thermal Mug, plain, light pattern</a>
+                    <p class="product_price m_P_gh">12 R.S</p>
+                    <div class="product_size_parant">
+                      وسط
+
+                    </div>
+                    <div class="product_color_parant">
+                      <span style="background-color: #474747"></span>
+                      <span style="background-color: #ffffff"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product_item">
+                  <div class="product_img_div">
+                    <a href="#" class="anc_item_product anc_gh">
+                      <img src="images/projects/3.png" alt="">
+
+                    </a>
+                    <button class="btn_gh btn_fav">
+                      <i class="lar la-heart"></i>
+                    </button>
+                    <button class="btn_gh btn_stitching">
+                      <img src="images/2.png" alt="">
+                    </button>
+                  </div>
+                  <div class="product_content">
+                    <a href="product-en.html" class="product_title anc_gh">Half Sleeve Plain T-Shirt With Collar 100%
+                      Cotton</a>
+                    <p class="product_price m_P_gh">40 R.S</p>
+                    <div class="product_size_parant">
+                      <span>S</span>
+                      -
+                      <span>M</span>
+                      -
+                      <span>L</span>
+                      -
+                      <span>XL</span>
+                      -
+                      <span>XXL</span>
+                    </div>
+                    <div class="product_color_parant">
+                      <span style="background-color: #474747"></span>
+                      <span style="background-color: #f82d2d"></span>
+                      <span style="background-color: #ffffff"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product_item">
+                  <div class="product_img_div">
+                    <a href="#" class="anc_item_product anc_gh">
+
+                      <img src="images/projects/4.png" alt="">
+                    </a>
+                    <button class="btn_gh btn_fav">
+                      <i class="lar la-heart"></i>
+                    </button>
+                    <button class="btn_gh btn_stitching printer">
+                      <img src="images/3.png" alt="">
+                    </button>
+                  </div>
+                  <div class="product_content">
+                    <a href="product-en.html" class="product_title anc_gh">Design (Do the Righteous) in a free and
+                      modern font</a>
+                    <p class="product_price m_P_gh">30 R.S</p>
+                    <div class="product_size_parant">
+                      Designed by Khaled Al-Ajmi
+                    </div>
+                    <div class="product_color_parant">
+                      <span style="background-color: #ffffff"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product_item">
+                  <div class="product_img_div">
+                    <a href="#" class="anc_item_product anc_gh">
+
+                      <img src="images/projects/1.png" alt="">
+                    </a>
+                    <button class="btn_gh btn_fav">
+                      <i class="lar la-heart"></i>
+                    </button>
+                  </div>
+                  <div class="product_content">
+                    <a href="product-en.html" class="product_title anc_gh"> 100% Cotton Plain Hood T-Shirt For
+                      Unisex</a>
+                    <p class="product_price m_P_gh">55 R.S</p>
+                    <div class="product_size_parant">
+                      <span>S</span>
+                      -
+                      <span>M</span>
+                      -
+                      <span>L</span>
+                      -
+                      <span>XL</span>
+                      -
+                      <span>XXL</span>
+                    </div>
+                    <div class="product_color_parant">
+                      <span style="background-color: #474747"></span>
+                      <span style="background-color: #f82d2d"></span>
+                      <span style="background-color: #002aff"></span>
+                      <span style="background-color: #4fd52b"></span>
+                      <span style="background-color: #38cac1"></span>
+                      <span style="background-color: #f6e23e"></span>
+                      <span style="background-color: #ffffff"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product_item">
+                  <div class="product_img_div">
+                    <a href="#" class="anc_item_product anc_gh">
+
+                      <img src="images/projects/2.png" alt="">
+                    </a>
+                    <button class="btn_gh btn_fav">
+                      <i class="lar la-heart"></i>
+                    </button>
+                  </div>
+                  <div class="product_content">
+                    <a href="product-en.html" class="product_title anc_gh"> Thermal Mug, plain, light pattern</a>
+                    <p class="product_price m_P_gh">12 R.S</p>
+                    <div class="product_size_parant">
+                      وسط
+
+                    </div>
+                    <div class="product_color_parant">
+                      <span style="background-color: #474747"></span>
+                      <span style="background-color: #ffffff"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product_item">
+                  <div class="product_img_div">
+                    <a href="#" class="anc_item_product anc_gh">
+
+                      <img src="images/projects/3.png" alt="">
+                    </a>
+                    <button class="btn_gh btn_fav">
+                      <i class="lar la-heart"></i>
+                    </button>
+                    <button class="btn_gh btn_stitching">
+                      <img src="images/2.png" alt="">
+                    </button>
+                  </div>
+                  <div class="product_content">
+                    <a href="product-en.html" class="product_title anc_gh">Half Sleeve Plain T-Shirt With Collar 100%
+                      Cotton</a>
+                    <p class="product_price m_P_gh">40 R.S</p>
+                    <div class="product_size_parant">
+                      <span>S</span>
+                      -
+                      <span>M</span>
+                      -
+                      <span>L</span>
+                      -
+                      <span>XL</span>
+                      -
+                      <span>XXL</span>
+                    </div>
+                    <div class="product_color_parant">
+                      <span style="background-color: #474747"></span>
+                      <span style="background-color: #f82d2d"></span>
+                      <span style="background-color: #ffffff"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product_item">
+                  <div class="product_img_div">
+                    <a href="#" class="anc_item_product anc_gh">
+                      <img src="images/projects/4.png" alt="">
+
+                    </a>
+                    <button class="btn_gh btn_fav">
+                      <i class="lar la-heart"></i>
+                    </button>
+                    <button class="btn_gh btn_stitching printer">
+                      <img src="images/3.png" alt="">
+                    </button>
+                  </div>
+                  <div class="product_content">
+                    <a href="product-en.html" class="product_title anc_gh">Design (Do the Righteous) in a free and
+                      modern font</a>
+                    <p class="product_price m_P_gh">30 R.S</p>
+                    <div class="product_size_parant">
+                      Designed by Khaled Al-Ajmi
+                    </div>
+                    <div class="product_color_parant">
+                      <span style="background-color: #ffffff"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next">
+          <i class="la la-angle-right"></i>
+        </div>
+        <div class="swiper-button-prev">
+          <i class="la la-angle-left"></i>
+        </div>
+      </div>
+
+    </div>
+    <a href="#" class="anc_main effects_2 anc_gh"> Show more</a>
+    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+  </section>
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~end new~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~start bestseller~~~~~~~~~~~~~~~~~~~~~~ -->
+  <section class="bestseller_section wow fadeInDown">
+    <h3 class="title_main">
+      bestseller
+    </h3>
+    <div class="container">
+      <div class="new">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="new-d_none_mob">
+              <div class="swiper-slide">
+                <div class="product_item">
+                  <div class="product_img_div">
+                    <a href="#" class="anc_item_product anc_gh">
+
+                      <img src="images/projects/1.png" alt="">
+                    </a>
+                    <button class="btn_gh btn_fav">
+                      <i class="lar la-heart"></i>
+                    </button>
+                  </div>
+                  <div class="product_content">
+                    <a href="product-en.html" class="product_title anc_gh"> 100% Cotton Plain Hood T-Shirt For
+                      Unisex</a>
+                    <p class="product_price m_P_gh">55 R.S</p>
+                    <div class="product_size_parant">
+                      <span>S</span>
+                      -
+                      <span>M</span>
+                      -
+                      <span>L</span>
+                      -
+                      <span>XL</span>
+                      -
+                      <span>XXL</span>
+                    </div>
+                    <div class="product_color_parant">
+                      <span style="background-color: #474747"></span>
+                      <span style="background-color: #f82d2d"></span>
+                      <span style="background-color: #002aff"></span>
+                      <span style="background-color: #4fd52b"></span>
+                      <span style="background-color: #38cac1"></span>
+                      <span style="background-color: #f6e23e"></span>
+                      <span style="background-color: #ffffff"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product_item">
+                  <div class="product_img_div">
+                    <a href="#" class="anc_item_product anc_gh">
+
+                      <img src="images/projects/2.png" alt="">
+                    </a>
+                    <button class="btn_gh btn_fav">
+                      <i class="lar la-heart"></i>
+                    </button>
+                  </div>
+                  <div class="product_content">
+                    <a href="product-en.html" class="product_title anc_gh"> Thermal Mug, plain, light pattern</a>
+                    <p class="product_price m_P_gh">12 R.S</p>
+                    <div class="product_size_parant">
+                      وسط
+
+                    </div>
+                    <div class="product_color_parant">
+                      <span style="background-color: #474747"></span>
+                      <span style="background-color: #ffffff"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product_item">
+                  <div class="product_img_div">
+                    <a href="#" class="anc_item_product anc_gh">
+
+                      <img src="images/projects/3.png" alt="">
+                    </a>
+                    <button class="btn_gh btn_fav">
+                      <i class="lar la-heart"></i>
+                    </button>
+                    <button class="btn_gh btn_stitching">
+                      <img src="images/2.png" alt="">
+                    </button>
+                  </div>
+                  <div class="product_content">
+                    <a href="product-en.html" class="product_title anc_gh">Half Sleeve Plain T-Shirt With Collar 100%
+                      Cotton</a>
+                    <p class="product_price m_P_gh">40 R.S</p>
+                    <div class="product_size_parant">
+                      <span>S</span>
+                      -
+                      <span>M</span>
+                      -
+                      <span>L</span>
+                      -
+                      <span>XL</span>
+                      -
+                      <span>XXL</span>
+                    </div>
+                    <div class="product_color_parant">
+                      <span style="background-color: #474747"></span>
+                      <span style="background-color: #f82d2d"></span>
+                      <span style="background-color: #ffffff"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product_item">
+                  <div class="product_img_div">
+                    <a href="#" class="anc_item_product anc_gh">
+
+                      <img src="images/projects/4.png" alt="">
+                    </a>
+                    <button class="btn_gh btn_fav">
+                      <i class="lar la-heart"></i>
+                    </button>
+                    <button class="btn_gh btn_stitching printer">
+                      <img src="images/3.png" alt="">
+                    </button>
+                  </div>
+                  <div class="product_content">
+                    <a href="product-en.html" class="product_title anc_gh">Design (Do the Righteous) in a free and
+                      modern font</a>
+                    <p class="product_price m_P_gh">30 R.S</p>
+                    <div class="product_size_parant">
+                      Designed by Khaled Al-Ajmi
+                    </div>
+                    <div class="product_color_parant">
+                      <span style="background-color: #ffffff"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product_item">
+                  <div class="product_img_div">
+                    <a href="#" class="anc_item_product anc_gh">
+
+                      <img src="images/projects/1.png" alt="">
+                    </a>
+                    <button class="btn_gh btn_fav">
+                      <i class="lar la-heart"></i>
+                    </button>
+                  </div>
+                  <div class="product_content">
+                    <a href="product-en.html" class="product_title anc_gh"> 100% Cotton Plain Hood T-Shirt For
+                      Unisex</a>
+                    <p class="product_price m_P_gh">55 R.S</p>
+                    <div class="product_size_parant">
+                      <span>S</span>
+                      -
+                      <span>M</span>
+                      -
+                      <span>L</span>
+                      -
+                      <span>XL</span>
+                      -
+                      <span>XXL</span>
+                    </div>
+                    <div class="product_color_parant">
+                      <span style="background-color: #474747"></span>
+                      <span style="background-color: #f82d2d"></span>
+                      <span style="background-color: #002aff"></span>
+                      <span style="background-color: #4fd52b"></span>
+                      <span style="background-color: #38cac1"></span>
+                      <span style="background-color: #f6e23e"></span>
+                      <span style="background-color: #ffffff"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product_item">
+                  <div class="product_img_div">
+                    <a href="#" class="anc_item_product anc_gh">
+
+                      <img src="images/projects/2.png" alt="">
+                    </a>
+                    <button class="btn_gh btn_fav">
+                      <i class="lar la-heart"></i>
+                    </button>
+                  </div>
+                  <div class="product_content">
+                    <a href="product-en.html" class="product_title anc_gh"> Thermal Mug, plain, light pattern</a>
+                    <p class="product_price m_P_gh">12 R.S</p>
+                    <div class="product_size_parant">
+                      وسط
+
+                    </div>
+                    <div class="product_color_parant">
+                      <span style="background-color: #474747"></span>
+                      <span style="background-color: #ffffff"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product_item">
+                  <div class="product_img_div">
+                    <a href="#" class="anc_item_product anc_gh">
+
+                      <img src="images/projects/3.png" alt="">
+                    </a>
+                    <button class="btn_gh btn_fav">
+                      <i class="lar la-heart"></i>
+                    </button>
+                    <button class="btn_gh btn_stitching">
+                      <img src="images/2.png" alt="">
+                    </button>
+                  </div>
+                  <div class="product_content">
+                    <a href="product-en.html" class="product_title anc_gh">Half Sleeve Plain T-Shirt With Collar 100%
+                      Cotton</a>
+                    <p class="product_price m_P_gh">40 R.S</p>
+                    <div class="product_size_parant">
+                      <span>S</span>
+                      -
+                      <span>M</span>
+                      -
+                      <span>L</span>
+                      -
+                      <span>XL</span>
+                      -
+                      <span>XXL</span>
+                    </div>
+                    <div class="product_color_parant">
+                      <span style="background-color: #474747"></span>
+                      <span style="background-color: #f82d2d"></span>
+                      <span style="background-color: #ffffff"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product_item">
+                  <div class="product_img_div">
+                    <a href="#" class="anc_item_product anc_gh">
+
+                      <img src="images/projects/4.png" alt="">
+                    </a>
+                    <button class="btn_gh btn_fav">
+                      <i class="lar la-heart"></i>
+                    </button>
+                    <button class="btn_gh btn_stitching printer">
+                      <img src="images/3.png" alt="">
+                    </button>
+                  </div>
+                  <div class="product_content">
+                    <a href="product-en.html" class="product_title anc_gh">Design (Do the Righteous) in a free and
+                      modern font</a>
+
+                    <p class="product_price m_P_gh">30 R.S</p>
+                    <div class="product_size_parant">
+                      Designed by Khaled Al-Ajmi
+                    </div>
+                    <div class="product_color_parant">
+                      <span style="background-color: #ffffff"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next">
+          <i class="la la-angle-right"></i>
+        </div>
+        <div class="swiper-button-prev">
+          <i class="la la-angle-left"></i>
+        </div>
+      </div>
+
+    </div>
+    <a href="#" class="anc_main_black effects_ anc_gh"> Show more</a>
+    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+  </section>
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~end bestseller~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~start best_designers~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+  <section class="best_designers_section wow fadeInDown">
+    <img src="images/Shape_f.png" alt="" class="shape_best">
+    <div class="container">
+      <div class="best_designers">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="content_best_designers">
+              <h4 class="m_P_gh title_best_d">Top designers</h4>
+              <a href="designers-en.html" class="anc_main effects_2 anc_gh"> Show more</a>
+            </div>
+          </div>
+          <div class="col-md-9">
+            <div class="slide_best_designers">
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="item-designer">
+                      <a href="#" class="anc_gh anc-designer">
+                        <figure>
+                          <img src="images/designers/1.png" alt="">
+                        </figure>
+                        <span class="designer_name">Khaled Al-Ajmi</span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="item-designer">
+                      <a href="#" class="anc_gh anc-designer">
+                        <figure>
+                          <img src="images/designers/2.png" alt="">
+                        </figure>
+                        <span class="designer_name">Mohammed Jassim</span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="item-designer">
+                      <a href="#" class="anc_gh anc-designer">
+                        <figure>
+                          <img src="images/designers/3.png" alt="">
+                        </figure>
+                        <span class="designer_name"> Nora Abdul Rahman </span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="item-designer">
+                      <a href="#" class="anc_gh anc-designer">
+                        <figure>
+                          <img src="images/designers/4.png" alt="">
+                        </figure>
+                        <span class="designer_name"> Islam Shawky</span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="item-designer">
+                      <a href="#" class="anc_gh anc-designer">
+                        <figure>
+                          <img src="images/designers/5.png" alt="">
+                        </figure>
+                        <span class="designer_name">Shatha Al Ameri</span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="item-designer">
+                      <a href="#" class="anc_gh anc-designer">
+                        <figure>
+                          <img src="images/designers/4.png" alt="">
+                        </figure>
+                        <span class="designer_name">Islam Shawky </span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="item-designer">
+                      <a href="#" class="anc_gh anc-designer">
+                        <figure>
+                          <img src="images/designers/5.png" alt="">
+                        </figure>
+                        <span class="designer_name">Shatha Al Ameri</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-next">
+                <i class="la la-angle-right"></i>
+              </div>
+              <div class="swiper-button-prev">
+                <i class="la la-angle-left"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a href="designers-en.html" class="anc_main effects_2 anc_gh"> Show more</a>
+      </div>
+    </div>
+  </section>
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~end best_designers~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~start footer~~~~~~~~~~~~~~~~~~~~~~ -->
+  <footer>
+    <div class="container">
+      <div class="footer">
+        <div class="logo_f">
+          <figure>
+            <img src="images/logo.png" alt="">
+          </figure>
+        </div>
+        <div class="social_media">
+          <ul class="ul_gh ul_social">
+            <li><a href="#" class="anc_gh anc_social"><i class="lab la-telegram"></i></a></li>
+            <li><a href="#" class="anc_gh anc_social"><i class="lab la-instagram"></i></a></li>
+            <li><a href="#" class="anc_gh anc_social"><i class="lab la-youtube"></i></a></li>
+            <li><a href="#" class="anc_gh anc_social"><i class="lab la-twitter"></i></a></li>
+            <li><a href="#" class="anc_gh anc_social"><i class="lab la-facebook-f"></i></a></li>
+          </ul>
+        </div>
+        <div class="footer_nav">
+          <ul class="ul_footer_nav ul_gh">
+            <li><a href="#" class="anc_footer_n anc_gh">about us</a></li>
+            <li><a href="faq-en.html" class="anc_footer_n anc_gh">FAQ</a></li>
+            <li><a href="#" class="anc_footer_n anc_gh">Terms & Conditions</a></li>
+            <li><a href="contact-en.html" class="anc_footer_n anc_gh">contact us</a></li>
+          </ul>
+        </div>
+        <div class="copyright">
+          <p class="m_P_gh copy_ink">© INK Store 2022</p>
+          <img src="images/payment.png" alt="">
+          <p class="m_P_gh ">
+            Made in
+            <a href="#">
+              <img src="images/tasawk-en.png" alt="">
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~end footer~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+  <button class="btn_gh back_top show"></button>
+  <script src="js/jquery-3.4.1.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" />
+  <link rel="icon" href="images/favicon.png" type="image/png" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="style/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+  <link rel="stylesheet" href="style/bootstrap-rtl.min.css" />
+  <link rel="stylesheet" href="style/main.css" />
+  <title>INK | checkout</title>
+</head>
+
+<body>
+  <!-- preload progress -->
+  <div class="progress_preload">
+    <div class="progress" id="progress_div">
+      <div class="bar" id="bar1"></div>
+    </div>
+    <input type="hidden" id="progress_width" value="0" />
+  </div>
+  <div class="login-popup-parant">
+    <i class="las la-times close_login"></i>
+    <div class="login-popup">
+      <h3 class="m_P_gh">تسجيل الدخول</h3>
+      <form>
+        <div class="form-group">
+          <label> رقم الجوال</label>
+          <div class="input_parant">
+            <input type="password" placeholder="5xxxxxxxx" class="password_change">
+            <span>
+              996+
+              <img src="images/lang-login.png" alt="">
+            </span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>كلمة المرور</label>
+          <div class="input_parant">
+            <input type="password" class="password_change">
+            <span>
+              <button class="btn_gh btn_show_pass">
+                <i class="las la-eye e_block"></i>
+                <i class="las la-low-vision e_none"></i>
+              </button>
+            </span>
+          </div>
+        </div>
+      </form>
+      <a href="#" class="forget_pass anc_gh">هل فقدت كلمة المرور؟</a>
+      <button class="btn_login btn_gh effects_2">دخول</button>
+      <div class="login-now">
+        ليس لديك حساب؟
+        <a href="register.html" class="login-now-anc anc_gh">سجل الآن</a>
+      </div>
+    </div>
+  </div>
+  <div class="moboverlay"></div>
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~start header~~~~~~~~~~~~~~~~~~~~~ -->
+  <header>
+    <div class="container">
+      <div class="header">
+        <div class="logo">
+          <a href="index.html" class="anc_logo">
+            <figure>
+              <img src="images/logo.png" alt="logo" />
+            </figure>
+          </a>
+        </div>
+        <div class="input-serch-div-parant">
+          <div class="input-serch-div">
+            <input type="text" placeholder="عن مــاذا تبحث؟">
+            <button class="btn_gh btn_serach"><i class="la la-search"></i></i></button>
+          </div>
+        </div>
+
+        <div class="user-shoping">
+          <button class="btn_bars btn_gh"><i class="la la-bars"></i></button>
+          <button class="btn_gh btn-search-mobile"><i class="la la-search"></i></button>
+          <button class="btn_gh btn_user_"><i class="las la-user"></i></button>
+          <button class="btn_gh btn-cart">
+            <i class="las la-shopping-cart"></i>
+            <span>5</span>
+          </button>
+          <a href="en.html" class="anc_lang anc_gh">
+            English
+          </a>
+          <a href="register.html" class="anc_designer_regis effects_ anc_gh">تسجيل مصمم</a>
+        </div>
+      </div>
+
+    </div>
+    <nav class="nav">
+      <button class="btn_close_nav btn_gh"><i class="las la-times"></i></button>
+      <ul class="ul_gh ul_nav">
+        <li><a href="#" class="anc_gh anc_nav b_red ">الأكثر مبيعًا</a></li>
+        <li><a href="#" class="anc_gh anc_nav b_red "> وصل حديثًا </a></li>
+        <li class="action_menu">
+          <a href="#" class="anc_gh anc_nav"> رجالي </a>
+          <ul class="ul_menu ul_gh">
+            <li><a href="category.html" class="anc_gh anc_menu"> تشيرتات تشيرتات تشيرتات تشيرتات</a></li>
+            <li><a href="#" class="anc_gh anc_menu">هوديز</a></li>
+            <li><a href="#" class="anc_gh anc_menu">هوديز</a></li>
+          </ul>
+        </li>
+        <li class="action_menu">
+          <a href="#" class="anc_gh anc_nav"> نسائي </a>
+          <ul class="ul_menu ul_gh">
+            <li><a href="#" class="anc_gh anc_menu"> تشيرتات</a></li>
+            <li><a href="#" class="anc_gh anc_menu">هوديز</a></li>
+            <li><a href="#" class="anc_gh anc_menu">هوديز</a></li>
+          </ul>
+        </li>
+        <li class="action_menu">
+          <a href="#" class="anc_gh anc_nav"> أطفال </a>
+          <ul class="ul_menu ul_gh">
+            <li><a href="#" class="anc_gh anc_menu"> تشيرتات</a></li>
+            <li><a href="#" class="anc_gh anc_menu">هوديز</a></li>
+            <li><a href="#" class="anc_gh anc_menu">هوديز</a></li>
+          </ul>
+        </li>
+        <li class="action_menu">
+          <a href="#" class="anc_gh anc_nav"> مقتنيات </a>
+          <ul class="ul_menu ul_gh">
+            <li><a href="#" class="anc_gh anc_menu"> تشيرتات</a></li>
+            <li><a href="#" class="anc_gh anc_menu">هوديز</a></li>
+            <li><a href="#" class="anc_gh anc_menu">هوديز</a></li>
+          </ul>
+        </li>
+        <li><a href="#" class="anc_gh anc_nav"> من نحن </a></li>
+        <li><a href="faq.html" class="anc_gh anc_nav"> الاسئلة الشائعة </a></li>
+        <li><a href="#" class="anc_gh anc_nav"> اتصل بنا</a></li>
+        <li><a href="en.html" class="anc_gh anc_nav anc_lang"> English</a></li>
+
+      </ul>
+    </nav>
+  </header>
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~end header~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~start breadcrumb~~~~~~~~~~~~~~~~~~~~~~ -->
+  <div class="breadcrumb-parant">
+    <div class="container">
+      <div class="breadcrumb_">
+        <a href="index.html" class="anc_gh">الرئيسية </a>
+        <span>/</span>
+        <h5 class="m_P_gh"> انهاء الطلب </h5>
+      </div>
+    </div>
+  </div>
+  <!-- ~~~~~~~~~~~~~~~~~~~~~end breadcrumb~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+  <main class="checkout_section sigle_page">
+    <div class="container">
+      <h3 class="m_P_gh title_main">انهاء الطلب</h3>
+      <div class="checkout">
+        <div class="item_check">
+          <h3 class="m_P_gh title_checkout">
+            <i class="las la-map-marked-alt"></i>
+            عنوان التوصيل
+          </h3>
+          <div class="add_address_parant">
+            <button class="add_select_address anc_gh popup-address">
+              <i class="las la-address-book"></i>
+              اختر من دفتر العناوين
+            </button>
+            <a href="add-address.html" class="add_select_address active-color anc_gh">
+              <i class="las la-plus"></i>
+              اضافة عنوان جديد
+            </a>
+          </div>
+          <form>
+            <div class="group-input">
+              <div class="form_group">
+                <label class="required">المدينة</label>
+                <div class="position_r">
+                  <i class="las la-angle-down angle_select"></i>
+                  <select class="select_input">
+                    <option value="one">اختر من القائمة</option>
+                    <option value="two">المدينة</option>
+                    <option value="three">المدينة</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form_group">
+                <label class="required"> الحي </label>
+                <div class="input_parant">
+                  <input type="text">
+                </div>
+              </div>
+              <div class="form_group">
+                <label class="required">اسم الشارع</label>
+                <div class="input_parant">
+                  <input type="text">
+                </div>
+              </div>
+              <div class="form_group">
+                <label class="required"> الموقع علي الخريطة </label>
+                <div class="input_parant">
+                  <img src="images/map.png" alt="">
+                </div>
+              </div>
+            </div>
+
+          </form>
+          <h3 class="m_P_gh title_checkout">
+            <i class="las la-credit-card"></i>
+            طريقة الدفع
+          </h3>
+
+          <div class="payment-methods-content">
+            <div class="payment-methods">
+              <label class="payment-method lazy-head-img" data-toggle="tooltip" data-placement="top" title=""
+                data-original-title="Cash On Delivery">
+                <input type="radio" checked name="payment-methods" value="01" />
+                <div class="payment-img loaded-img">
+                  <img src="images/pay1.png" />
+                </div>
+                <span> دفع ألكتروني</span>
+              </label>
+              <label class="payment-method lazy-head-img" data-toggle="tooltip" data-placement="top" title=""
+                data-original-title="Visa &amp; MasterCard">
+                <input type="radio" name="payment-methods" value="02" />
+                <div class="payment-img loaded-img">
+                  <img src="images/pay2.png" />
+                </div>
+                <span>تمارا </span>
+              </label>
+              <label class="payment-method lazy-head-img" data-toggle="tooltip" data-placement="top" title=""
+                data-original-title="mada">
+                <input type="radio" name="payment-methods" value="03" />
+                <div class="payment-img loaded-img">
+                  <img src="images/pay3.png" />
+                </div>
+                <span>تابي</span>
+              </label>
+              <label class="payment-method lazy-head-img" data-toggle="tooltip" data-placement="top" title=""
+                data-original-title="Sdad">
+                <input type="radio" name="payment-methods" value="04" />
+                <div class="payment-img loaded-img">
+                  <img src="images/pay4.png" />
+                </div>
+                <span>عند الإستلام</span>
+              </label>
+
+            </div>
+          </div>
+        </div>
+        <div class="item_check">
+          <h3 class="m_P_gh title_checkout m_none">
+            <i class="las la-shopping-cart"></i>
+            سلة الشراء
+          </h3>
+          <div class="item_shopping">
+            <div class="img_shopping">
+              <a href="product.html" class="anc_img_shopping anc_gh">
+                <figure>
+                  <img src="images/projects/product2.png" alt="">
+                </figure>
+              </a>
+            </div>
+            <div class="content_shopping">
+              <a href="product-en.html" class="anc_title_shopping anc_gh">تيشرت هود للجنسين سادة قطن 100% </a>
+              <div class="size_div">
+                <h5 class="m_P_gh name-size">المقاس</h5>
+                <span>XXL</span>
+              </div>
+              <div class="size_div">
+                <h5 class="m_P_gh name-size">اللون</h5>
+                <span class="color_span"></span>
+              </div>
+              <div class="price_parant">
+                <span class="num_">x 1</span>
+
+                <span class="price">55 ر.س</span>
+
+              </div>
+            </div>
+          </div>
+          <div class="item_shopping">
+            <div class="img_shopping">
+              <a href="product.html" class="anc_img_shopping anc_gh">
+                <figure>
+                  <img src="images/projects/product2.png" alt="">
+                </figure>
+              </a>
+            </div>
+            <div class="content_shopping">
+              <a href="product-en.html" class="anc_title_shopping anc_gh">تيشرت هود للجنسين سادة قطن 100% </a>
+
+              <div class="size_div">
+                <h5 class="m_P_gh name-size">المقاس</h5>
+                <span>XXL</span>
+              </div>
+              <div class="size_div">
+                <h5 class="m_P_gh name-size">اللون</h5>
+                <span class="color_span"></span>
+              </div>
+              <div class="price_parant">
+                <span class="num_">x 1</span>
+
+                <span class="price">55 ر.س</span>
+
+              </div>
+            </div>
+          </div>
+          <div class="total-price-parant">
+            <div class="total-price">
+              <h4 class="m_P_gh price-n">الإجمالي</h4>
+              <p class="m_P_gh price_d">110 ر.س</p>
+            </div>
+            <div class="total-price marginb">
+              <h4 class="m_P_gh price-n">رسوم التوصيل</h4>
+              <p class="m_P_gh price_d">
+
+                20
+                ر.س
+
+
+              </p>
+            </div>
+            <div class="total-price">
+              <h4 class="m_P_gh price-n">الإجمالي المستحق</h4>
+              <p class="m_P_gh price_d">130 ر.س</p>
+            </div>
+            <div class="total-price">
+              <p class="m_P_gh vat_">شامل ضريبة القيمة المضافة</p>
+            </div>
+            <a href="order-details.html" class="btn_addToCart anc_gh effects_2 ">
+
+              انهاء الطلب والدفع
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~start footer~~~~~~~~~~~~~~~~~~~~~~~ -->
+  <footer>
+    <div class="container">
+      <div class="footer">
+        <div class="logo_f">
+          <figure>
+            <img src="images/logo.png" alt="">
+        </div>
+        <div class="social_media">
+          <ul class="ul_gh ul_social">
+            <li><a href="#" class="anc_gh anc_social"><i class="lab la-telegram"></i></a></li>
+            <li><a href="#" class="anc_gh anc_social"><i class="lab la-instagram"></i></a></li>
+            <li><a href="#" class="anc_gh anc_social"><i class="lab la-youtube"></i></a></li>
+            <li><a href="#" class="anc_gh anc_social"><i class="lab la-twitter"></i></a></li>
+            <li><a href="#" class="anc_gh anc_social"><i class="lab la-facebook-f"></i></a></li>
+          </ul>
+        </div>
+        <div class="footer_nav">
+          <ul class="ul_footer_nav ul_gh">
+            <li><a href="#" class="anc_footer_n anc_gh">من نحن</a></li>
+            <li><a href="#" class="anc_footer_n anc_gh">الاسئلة الشائعة</a></li>
+            <li><a href="#" class="anc_footer_n anc_gh">الشروط والأحكام</a></li>
+            <li><a href="#" class="anc_footer_n anc_gh">اتصل بنا</a></li>
+          </ul>
+        </div>
+        <div class="copyright">
+          <p class="m_P_gh copy_ink">© متجر INK 2022</p>
+          <img src="images/payment.png" alt="">
+          <p class="m_P_gh ">
+            صنع في
+            <a href="#">
+              <img src="images/tasawk.png" alt="">
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~end footer~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+  <div class="address-box">
+    <i class="las la-times close_address-box"></i>
+    <div class="address_section">
+      <div class="address_book">
+        <div class="title_div_">
+          <h4 class="m_P_gh">دفتر العناوين</h4>
+        </div>
+        <div class="item_address">
+          <p class="m_P_gh address_p">الرياض</p>
+          <p class="m_P_gh address_p">الملز</p>
+          <p class="m_P_gh address_p">صلاح الدين الأيوبي</p>
+          <p class="m_P_gh address_p">24.667277670180287, 46.74848448650808</p>
+          <div class="btn_group_">
+            <button class="btn_gh btn_address btn_color1"><span>تعيين إفتراضي</span><i
+                class="las la-check"></i></button>
+            <button class="btn_gh btn_address btn_color2"><span>تعديل</span><i class="las la-pen"></i></button>
+            <button class="btn_gh btn_address btn_color3"><span>حذف</span><i class="las la-trash"></i></button>
+          </div>
+        </div>
+        <div class="item_address">
+          <p class="m_P_gh address_p">الرياض</p>
+          <p class="m_P_gh address_p">الملز</p>
+          <p class="m_P_gh address_p">صلاح الدين الأيوبي</p>
+          <p class="m_P_gh address_p">24.667277670180287, 46.74848448650808</p>
+          <div class="btn_group_">
+            <button class="btn_gh btn_address btn_color4"><span>تعيين إفتراضي</span><i
+                class="las la-check"></i></button>
+            <button class="btn_gh btn_address btn_color2"><span>تعديل</span><i class="las la-pen"></i></button>
+            <button class="btn_gh btn_address btn_color3"><span>حذف</span><i class="las la-trash"></i></button>
+          </div>
+        </div>
+        <div class="item_address">
+          <p class="m_P_gh address_p">الرياض</p>
+          <p class="m_P_gh address_p">الملز</p>
+          <p class="m_P_gh address_p">صلاح الدين الأيوبي</p>
+          <p class="m_P_gh address_p">24.667277670180287, 46.74848448650808</p>
+          <div class="btn_group_">
+            <button class="btn_gh btn_address btn_color4"><span>تعيين إفتراضي</span><i
+                class="las la-check"></i></button>
+            <button class="btn_gh btn_address btn_color2"><span>تعديل</span><i class="las la-pen"></i></button>
+            <button class="btn_gh btn_address btn_color3"><span>حذف</span><i class="las la-trash"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="btn_gh back_top show"></button>
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

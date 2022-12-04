@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+ <meta charset="UTF-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+ <link rel="stylesheet"
+  href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" />
+ <link rel="icon" href="images/favicon.png" type="image/png" />
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+ <link rel="stylesheet" href="style/bootstrap.min.css" />
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+ <link rel="stylesheet" href="style/main.css" />
+ <title>INK | Designer</title>
+</head>
+
+<body>
+ <!-- preload progress -->
+ <div class="progress_preload">
+  <div class="progress" id="progress_div">
+   <div class="bar" id="bar1"></div>
+  </div>
+  <input type="hidden" id="progress_width" value="0" />
+ </div>
+ <div class="login-popup-parant">
+  <i class="las la-times close_login"></i>
+  <div class="login-popup">
+   <h3 class="m_P_gh">sign in</h3>
+   <form>
+    <div class="form-group">
+     <label> Mobile number</label>
+     <div class="input_parant">
+      <input type="text" placeholder="5xxxxxxxx">
+      <span>
+       996+
+       <img src="images/lang-login.png" alt="">
+      </span>
+     </div>
+    </div>
+    <div class="form-group">
+     <label>password</label>
+     <div class="input_parant">
+      <input type="password">
+      <span>
+       <button class="btn_gh">
+        <i class="las la-eye"></i>
+       </button>
+      </span>
+     </div>
+    </div>
+   </form>
+   <a href="#" class="forget_pass anc_gh">Forgot your password?</a>
+   <button class="btn_login btn_gh effects_2">Login</button>
+   <div class="login-now">
+    Don't have an account?
+    <a href="register-en.html" class="login-now-anc anc_gh">Register</a>
+   </div>
+  </div>
+ </div>
+ <div class="moboverlay"></div>
+
+ <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~start header~~~~~~~~~~~~~~~~~~~~~ -->
+ <header>
+  <div class="container">
+   <div class="header">
+    <div class="logo">
+     <a href="en.html" class="anc_logo">
+      <figure>
+       <img src="images/logo.png" alt="logo" />
+      </figure>
+     </a>
+    </div>
+    <div class="input-serch-div-parant">
+     <div class="input-serch-div">
+      <input type="text" placeholder="What are you searching for?">
+      <button class="btn_gh btn_serach"><i class="la la-search"></i></i></button>
+     </div>
+    </div>
+
+    <div class="user-shoping">
+     <button class="btn_bars btn_gh"><i class="la la-bars"></i></button>
+     <button class="btn_gh btn-search-mobile"><i class="la la-search"></i></button>
+     <button class="btn_gh btn_user_"><i class="las la-user"></i></button>
+     <a href="cart.html" class="anc_gh btn-cart">
+      <i class="las la-shopping-cart"></i>
+      <span>5</span>
+     </a>
+     <a href="index.html" class="anc_lang anc_gh">
+      العربية
+     </a>
+     <a href="register-en.html" class="anc_designer_regis effects_ anc_gh">designer registr</a>
+    </div>
+   </div>
+
+  </div>
+  <nav class="nav">
+   <button class="btn_close_nav btn_gh"><i class="las la-times"></i></button>
+   <ul class="ul_gh ul_nav">
+    <li><a href="#" class="anc_gh anc_nav b_red ">bestseller</a></li>
+    <li><a href="#" class="anc_gh anc_nav b_red "> New Arrival</a></li>
+    <li class="action_menu">
+     <a href="#" class="anc_gh anc_nav"> men </a>
+     <ul class="ul_menu ul_gh">
+      <li><a href="Category-en.html" class="anc_gh anc_menu"> T-shirts T-shirts T-shirts T-shirts</a></li>
+      <li><a href="#" class="anc_gh anc_menu">hoodies</a></li>
+      <li><a href="#" class="anc_gh anc_menu">hoodies</a></li>
+     </ul>
+    </li>
+    <li class="action_menu">
+     <a href="#" class="anc_gh anc_nav"> women </a>
+     <ul class="ul_menu ul_gh">
+      <li><a href="#" class="anc_gh anc_menu"> T shirts</a></li>
+      <li><a href="#" class="anc_gh anc_menu">hoodies</a></li>
+      <li><a href="#" class="anc_gh anc_menu">hoodies</a></li>
+     </ul>
+    </li>
+    <li class="action_menu">
+     <a href="#" class="anc_gh anc_nav"> kids </a>
+     <ul class="ul_menu ul_gh">
+      <li><a href="#" class="anc_gh anc_menu"> T shirts</a></li>
+      <li><a href="#" class="anc_gh anc_menu">hoodies</a></li>
+      <li><a href="#" class="anc_gh anc_menu">hoodies</a></li>
+     </ul>
+    </li>
+    <li class="action_menu">
+     <a href="#" class="anc_gh anc_nav"> collectibles </a>
+     <ul class="ul_menu ul_gh">
+      <li><a href="#" class="anc_gh anc_menu"> T shirts</a></li>
+      <li><a href="#" class="anc_gh anc_menu">hoodies</a></li>
+      <li><a href="#" class="anc_gh anc_menu">hoodies</a></li>
+     </ul>
+    </li>
+    <li><a href="#" class="anc_gh anc_nav">about us</a></li>
+    <li><a href="faq-en.html" class="anc_gh anc_nav"> FAQ</a></li>
+    <li><a href="contact-us-en.html" class="anc_gh anc_nav">contact us</a></li>
+    <li><a href="index.html" class="anc_gh anc_nav anc_lang"> العربية</a></li>
+
+   </ul>
+  </nav>
+ </header>
+ <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~end header~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+ <!-- ~~~~~~~~~~~~~~~~~~~~start breadcrumb~~~~~~~~~~~~~~~~~~~~~~ -->
+ <div class="breadcrumb-parant">
+  <div class="container">
+   <div class="breadcrumb_">
+    <a href="index.html" class="anc_gh">home </a>
+    <span>/</span>
+    <h5 class="m_P_gh">Khaled Al-Ajmi</h5>
+   </div>
+  </div>
+ </div>
+ <!-- ~~~~~~~~~~~~~~~~~~~~~end breadcrumb~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+ <main class="designer_page_section sigle_page">
+  <div class="container">
+   <div class="designer-page">
+    <div class="designer-page-name">
+     <figure>
+      <img src="images/portrait-successful-leader2.png" alt="">
+     </figure>
+     <h4 class="m_P_gh">Khaled Al-Ajmi</h4>
+    </div>
+    <div class="new">
+     <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+       <div class="new-d_none_mob">
+        <div class="swiper-slide">
+         <div class="product_item">
+          <div class="product_img_div">
+           <img src="images/projects/1.png" alt="">
+           <button class="btn_gh btn_fav">
+            <i class="lar la-heart"></i>
+           </button>
+          </div>
+          <div class="product_content">
+           <h4 class="product_title m_P_gh">100% Cotton Plain Hood T-Shirt For Unisex</h4>
+           <p class="product_price m_P_gh">55 R.S</p>
+           <div class="product_size_parant">
+            <span>S</span>
+            -
+            <span>M</span>
+            -
+            <span>L</span>
+            -
+            <span>XL</span>
+            -
+            <span>XXL</span>
+           </div>
+           <div class="product_color_parant">
+            <span style="background-color: #474747"></span>
+            <span style="background-color: #f82d2d"></span>
+            <span style="background-color: #002aff"></span>
+            <span style="background-color: #4fd52b"></span>
+            <span style="background-color: #38cac1"></span>
+            <span style="background-color: #f6e23e"></span>
+            <span style="background-color: #ffffff"></span>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="swiper-slide">
+         <div class="product_item">
+          <div class="product_img_div">
+           <img src="images/projects/2.png" alt="">
+           <button class="btn_gh btn_fav">
+            <i class="lar la-heart"></i>
+           </button>
+          </div>
+          <div class="product_content">
+           <h4 class="product_title m_P_gh">Thermal Mug Plain Light Pattern</h4>
+           <p class="product_price m_P_gh">12 R.S</p>
+           <div class="product_size_parant">
+            medium
+           </div>
+           <div class="product_color_parant">
+            <span style="background-color: #474747"></span>
+            <span style="background-color: #ffffff"></span>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="swiper-slide">
+         <div class="product_item">
+          <div class="product_img_div">
+           <img src="images/projects/3.png" alt="">
+           <button class="btn_gh btn_fav">
+            <i class="lar la-heart"></i>
+           </button>
+           <button class="btn_gh btn_stitching">
+            <img src="images/2.png" alt="">
+           </button>
+          </div>
+          <div class="product_content">
+           <a href="product-en.html" class="product_title anc_gh">Half Sleeve Plain T-Shirt With Collar 100% Cotton</a>
+           <p class="product_price m_P_gh">40 R.S</p>
+           <div class="product_size_parant">
+            <span>S</span>
+            -
+            <span>M</span>
+            -
+            <span>L</span>
+            -
+            <span>XL</span>
+            -
+            <span>XXL</span>
+           </div>
+           <div class="product_color_parant">
+            <span style="background-color: #474747"></span>
+            <span style="background-color: #f82d2d"></span>
+            <span style="background-color: #ffffff"></span>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="swiper-slide">
+         <div class="product_item">
+          <div class="product_img_div">
+           <img src="images/projects/4.png" alt="">
+           <button class="btn_gh btn_fav">
+            <i class="lar la-heart"></i>
+           </button>
+           <button class="btn_gh btn_stitching printer">
+            <img src="images/3.png" alt="">
+           </button>
+          </div>
+          <div class="product_content">
+           <a href="product-en.html" class="product_title anc_gh">Design (Do the Righteous) in a free and modern
+            font</a>
+           <p class="product_price m_P_gh">30 R.S</p>
+           <div class="product_size_parant">
+            المصمم Khaled Al-Ajmi
+           </div>
+           <div class="product_color_parant">
+            <span style="background-color: #ffffff"></span>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="swiper-slide">
+         <div class="product_item">
+          <div class="product_img_div">
+           <img src="images/projects/1.png" alt="">
+           <button class="btn_gh btn_fav">
+            <i class="lar la-heart"></i>
+           </button>
+          </div>
+          <div class="product_content">
+           <h4 class="product_title m_P_gh">100% Cotton Plain Hood T-Shirt For Unisex</h4>
+           <p class="product_price m_P_gh">55 R.S</p>
+           <div class="product_size_parant">
+            <span>S</span>
+            -
+            <span>M</span>
+            -
+            <span>L</span>
+            -
+            <span>XL</span>
+            -
+            <span>XXL</span>
+           </div>
+           <div class="product_color_parant">
+            <span style="background-color: #474747"></span>
+            <span style="background-color: #f82d2d"></span>
+            <span style="background-color: #002aff"></span>
+            <span style="background-color: #4fd52b"></span>
+            <span style="background-color: #38cac1"></span>
+            <span style="background-color: #f6e23e"></span>
+            <span style="background-color: #ffffff"></span>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="swiper-slide">
+         <div class="product_item">
+          <div class="product_img_div">
+           <img src="images/projects/2.png" alt="">
+           <button class="btn_gh btn_fav">
+            <i class="lar la-heart"></i>
+           </button>
+          </div>
+          <div class="product_content">
+           <h4 class="product_title m_P_gh">Thermal Mug Plain Light Pattern</h4>
+           <p class="product_price m_P_gh">12 R.S</p>
+           <div class="product_size_parant">
+            medium
+
+           </div>
+           <div class="product_color_parant">
+            <span style="background-color: #474747"></span>
+            <span style="background-color: #ffffff"></span>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="swiper-slide">
+         <div class="product_item">
+          <div class="product_img_div">
+           <img src="images/projects/3.png" alt="">
+           <button class="btn_gh btn_fav">
+            <i class="lar la-heart"></i>
+           </button>
+           <button class="btn_gh btn_stitching">
+            <img src="images/2.png" alt="">
+           </button>
+          </div>
+          <div class="product_content">
+           <a href="product-en.html" class="product_title anc_gh">Half Sleeve Plain T-Shirt With Collar 100% Cotton</a>
+           <p class="product_price m_P_gh">40 R.S</p>
+           <div class="product_size_parant">
+            <span>S</span>
+            -
+            <span>M</span>
+            -
+            <span>L</span>
+            -
+            <span>XL</span>
+            -
+            <span>XXL</span>
+           </div>
+           <div class="product_color_parant">
+            <span style="background-color: #474747"></span>
+            <span style="background-color: #f82d2d"></span>
+            <span style="background-color: #ffffff"></span>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="swiper-slide">
+         <div class="product_item">
+          <div class="product_img_div">
+           <img src="images/projects/4.png" alt="">
+           <button class="btn_gh btn_fav">
+            <i class="lar la-heart"></i>
+           </button>
+           <button class="btn_gh btn_stitching printer">
+            <img src="images/3.png" alt="">
+           </button>
+          </div>
+          <div class="product_content">
+           <a href="product-en.html" class="product_title anc_gh">Design (Do the Righteous) in a free and modern
+            font</a>
+           <p class="product_price m_P_gh">30 R.S</p>
+           <div class="product_size_parant">
+            Designer Khaled Al-Ajmi
+           </div>
+           <div class="product_color_parant">
+            <span style="background-color: #ffffff"></span>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="swiper-pagination"></div>
+
+    </div>
+   </div>
+  </div>
+ </main>
+
+
+ <!-- ~~~~~~~~~~~~~~~~~~~~~~~~start footer~~~~~~~~~~~~~~~~~~~~~~ -->
+ <footer>
+  <div class="container">
+   <div class="footer">
+    <div class="logo_f">
+     <figure>
+      <img src="images/logo.png" alt="">
+     </figure>
+    </div>
+    <div class="social_media">
+     <ul class="ul_gh ul_social">
+      <li><a href="#" class="anc_gh anc_social"><i class="lab la-telegram"></i></a></li>
+      <li><a href="#" class="anc_gh anc_social"><i class="lab la-instagram"></i></a></li>
+      <li><a href="#" class="anc_gh anc_social"><i class="lab la-youtube"></i></a></li>
+      <li><a href="#" class="anc_gh anc_social"><i class="lab la-twitter"></i></a></li>
+      <li><a href="#" class="anc_gh anc_social"><i class="lab la-facebook-f"></i></a></li>
+     </ul>
+    </div>
+    <div class="footer_nav">
+     <ul class="ul_footer_nav ul_gh">
+      <li><a href="#" class="anc_footer_n anc_gh">about us</a></li>
+      <li><a href="faq-en.html" class="anc_footer_n anc_gh">FAQ</a></li>
+      <li><a href="#" class="anc_footer_n anc_gh">Terms & Conditions</a></li>
+      <li><a href="contact-en.html" class="anc_footer_n anc_gh">contact us</a></li>
+     </ul>
+    </div>
+    <div class="copyright">
+     <p class="m_P_gh copy_ink">© INK Store 2022</p>
+     <img src="images/payment.png" alt="">
+     <p class="m_P_gh ">
+      Made in
+      <a href="#">
+       <img src="images/tasawk-en.png" alt="">
+      </a>
+     </p>
+    </div>
+   </div>
+  </div>
+ </footer>
+ <!-- ~~~~~~~~~~~~~~~~~~~~~~end footer~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+ <button class="btn_gh back_top show"></button>
+
+ <script src="js/jquery-3.4.1.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+ <script src="js/bootstrap.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+ <script src="js/popper.min.js"></script>
+ <script src="js/script.js"></script>
+</body>
+
+</html>

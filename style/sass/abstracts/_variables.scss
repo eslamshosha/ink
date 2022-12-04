@@ -1,0 +1,28 @@
+//  colors
+$black_color: #000000;
+$main_color: #2a394e;
+$color_1: #ffffff;
+$color_2: #f82d2d;
+$color_5: #9d9c9c;
+
+// button
+$height_btn: 49px;
+
+// font
+
+$font_s: 16px;
+$font_b: 700;
+
+//var sass display flex
+@mixin flex-var($flex, $item-center, $justify) {
+  display: $flex;
+  align-items: $item-center;
+  justify-content: $justify;
+}
+
+//var sass display flex
+@mixin grid-var($grid, $repeat, $gap) {
+  display: $grid;
+  grid-template-columns: $repeat;
+  gap: $gap;
+}

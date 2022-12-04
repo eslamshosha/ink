@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACMA,AAAA,IAAI,CAAC;EACH,WAAW,EANJ,SAAS,EAAE,UAAU;EAO5B,SAAS,EALE,IAAI;EAMf,KAAK,EAPG,GAAG;CAQZ;;AAED,AAAA,UAAU,CAAC;EACT,KAAK,EATG,KAAK;CAUd;;AACD,AAAA,KAAK,CAAA;EACH,SAAS,EAbE,IAAI;EAcf,KAAK,EAfG,GAAG;CAiBZ",
+    "sources": [
+        "main.scss",
+        "abstracts/varibles.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+ <title>INK | Ink-invoice</title>
+</head>
+<style>
+ body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+ }
+
+ .header-invoice {
+  padding: 30px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+
+ .title_invoice {
+  font-size: 18px;
+  color: #000000;
+  font-weight: bold;
+ }
+
+ .table_group {
+  padding: 0 60px;
+  overflow: hidden;
+ }
+
+ .table_group table {
+  width: 100%;
+  margin-bottom: 40px;
+  border: 1px solid #bfbfbf;
+  table-layout: fixed;
+ }
+
+ .table_group table th,
+ .table_group table td {
+  height: 37px;
+  padding-inline-start: 20px;
+
+ }
+
+ .title_table {
+  margin: 0;
+  height: 37px;
+  font-size: 16px;
+  /* font-weight: bold; */
+  background-color: #000000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding-inline-start: 20px;
+  max-width: 100%;
+ }
+
+ .table1 th,
+ .table1 td {
+  /* width: 25%; */
+  font-size: 14px;
+  color: #000000;
+  font-weight: 400;
+ }
+
+ table,
+ th,
+ td {
+  border-bottom: 1px solid #bfbfbf;
+  border-collapse: collapse;
+  border-inline-end: 1px solid #bfbfbf;
+ }
+
+ .text_bold {
+  font-weight: bold;
+ }
+
+ .wdith-25 {
+  width: 25%;
+ }
+
+ .wdith-50 {
+  width: 50%;
+ }
+
+ .table3 th {
+  width: 50% !important;
+ }
+
+ .table_group table th {
+  text-align: start;
+ }
+
+ figure {
+  margin: 0;
+  display: block;
+  width: 240px;
+ }
+
+ figure img {
+  max-width: 100%
+ }
+
+ .qrfig {
+  text-align: end;
+ }
+
+ .table3 th {
+  font-weight: 400;
+ }
+
+ @media print {
+  .table_group {
+   padding: 0 30px;
+   overflow: hidden;
+  }
+
+  figure {
+   width: 130px;
+
+
+  }
+
+  .header-invoice {
+   padding: 20px 30px;
+  }
+ }
+</style>
+
+<body>
+
+ <div class="header-invoice">
+  <figure>
+   <img src="images/logo.png" alt="">
+  </figure>
+  <h3 class="title_invoice">Tax Invoice فاتورة ضريبية</h3>
+  <figure class="qrfig">
+   <img src="images/qr.png" alt="">
+  </figure>
+ </div>
+ <div class="table_group">
+  <h4 class="title_table">بيانات الفاتورة</h4>
+  <table class="table1">
+   <tr>
+    <th class="text_bold"> اسم العميل</th>
+    <th> عبدالله الخضير</th>
+    <th>رقم الطلب/الفاتورة</th>
+    <th>#1234</th>
+   </tr>
+   <tr>
+    <td class="text_bold">رقم العميل</td>
+    <td>33</td>
+    <td>تاريخ الطلب</td>
+    <td>2022/09/02</td>
+
+   </tr>
+   <tr>
+    <td class="text_bold">عنوان العميل</td>
+    <td>168 ش صلاح الدين الأيوبي - الملز - الرياض</td>
+    <td>
+     رقم السجل التجاري
+     .C.R NO
+    </td>
+    <td>0000000000</td>
+
+   </tr>
+   <tr>
+    <td class="text_bold">موعد التوصيل</td>
+    <td>2022/10/18 - 05:30</td>
+    <td>
+     الرقم الضريبي
+     .VAT NO
+    </td>
+    <td>0000000000</td>
+   </tr>
+  </table>
+  <h4 class="title_table">وصف المنتجات أو الخدمات</h4>
+  <table>
+   <tr>
+    <th colspan="3"> اسم الصنف او المنتج</th>
+    <th colspan="1">العدد </th>
+    <th colspan="1">سعر الوحدة </th>
+    <th colspan="1">السعر </th>
+
+   </tr>
+   <tr>
+    <td colspan="3"> اسم منتج تجريبي</td>
+    <td colspan="1"> 10</td>
+    <td colspan="1"> 20 ريال</td>
+    <td colspan="1"> 200 ريال</td>
+
+
+   </tr>
+   <tr>
+    <td colspan="3"> اسم منتج تجريبي</td>
+    <td colspan="1">10 </td>
+    <td colspan="1">20 ريال </td>
+    <td colspan="1"> 200 ريال</td>
+
+
+   </tr>
+   <tr>
+    <td colspan="3">اسم منتج تجريبي </td>
+    <td colspan="1"> 10</td>
+    <td colspan="1"> 20 ريال</td>
+    <td colspan="1"> 200 ريال</td>
+   </tr>
+  </table>
+  <h4 class="title_table"> الإجمالي </h4>
+  <table class="table3">
+   <tr>
+    <th> الإجمالي غير شامل ضريبة القيمة المضافة</th>
+    <th>600 ريال </th>
+   </tr>
+   <tr>
+    <td> قيمة الخصم</td>
+    <td> 30 ريال </td>
+   </tr>
+   <tr>
+    <td>السعر بعد الخصم </td>
+    <td> 570 ريال</td>
+   </tr>
+   <tr>
+    <td>ضريبة القيمة المضافة </td>
+    <td>85.5 ريال </td>
+
+   </tr>
+   <tr>
+    <td>تكلفة التوصيل </td>
+    <td> 20 ريال</td>
+   </tr>
+   <tr>
+    <td class="text_bold">المجموع شامل ضريبة القيمة المضافة </td>
+    <td class="text_bold"> 675 ريال</td>
+   </tr>
+  </table>
+
+ </div>
+
+
+</body>
+
+</html>

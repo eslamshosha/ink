@@ -1,0 +1,26 @@
+@import "sass/abstracts/variables";
+@import "sass/abstracts/mixins";
+@import "sass/abstracts/functions";
+
+//layout
+@import "sass/base/base";
+@import "sass/base/fonts";
+
+//components
+@import "sass/components/intro";
+@import "sass/components/new";
+@import "sass/components/best_designers";
+
+//layout
+@import "sass/layout/header";
+@import "sass/layout/footer";
+
+// pages
+@import "sass/pages/register";
+@import "sass/pages/cart";
+@import "sass/pages/profile";
+@import "sass/pages/my_orders";
+
+// ~~~~~~~~~~~~~~
+@import "sass/pages/product";
+@import "sass/pages/designer-page";
