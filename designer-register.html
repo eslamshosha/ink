@@ -160,97 +160,155 @@
     <div class="container">
       <div class="contact">
         <h3 class="m_P_gh title_main">تسجيل مصمم</h3>
-        <form>
-          <div class="group-input">
-            <div class="form_group file-group">
-              <label class="required"> الشعار</label>
-              <div class="drop-file">
-                <span class="btn_upload">
-                  <input type="file" id="customUpload" title="" />
-                  <span class="upload-text">
-                    drag and drop a file here or click
-                  </span> 
-                  </span>
-                <div class="uploaded-cont">
-                  <img id="ImgPreview5" src="" class="preview5" />
-                <button id="removeImage5" class="btn-rmv">
-                  <i class="las la-trash-alt"></i>
-                  حذف
-                </button>
+        <div class="wizard card-like">
+          <form>
+            <div class="wizard-header">
+              <div class="steps text-center">
+                <div class="wizard-step active"></div>
+                <div class="wizard-step"></div>
+              </div>
+            </div>
+            <div class="wizard-body">
+              <div class="step initial active">
+                <div class="group-input">
+                  <div class="form_group file-group">
+                    <label class="required"> الشعار</label>
+                    <div class="drop-file">
+                      <span class="btn_upload">
+                        <input type="file" id="customUpload" title="" />
+                        <span class="upload-text">
+                          drag and drop a file here or click
+                        </span> 
+                        </span>
+                      <div class="uploaded-cont">
+                        <img id="ImgPreview5" src="" class="preview5" />
+                      <button id="removeImage5" class="btn-rmv">
+                        <i class="las la-trash-alt"></i>
+                        حذف
+                      </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form_group">
+                    <label class="required"> الاسم بالكامل</label>
+                    <input type="text">
+                  </div>
+                  <div class="form_group">
+                    <label class="required"> رقم الجوال</label>
+                    <div class="input_parant">
+                      <input type="number" placeholder="5xxxxxxxx">
+                      <span>
+                        996+
+                        <img src="images/lang-login.png" alt="">
+                      </span>
+                    </div>
+                  </div>
+                  <div class="form_group">
+                    <label class="required"> البريد الإلكتروني</label>
+                    <input type="text">
+                  </div>
+                  <div class="form_group">
+                    <label class="required">النوع</label>
+                    <div class="position_r">
+                      <i class="las la-angle-down angle_select"></i>
+                      <select class="select_input select2-gender" name="gender">
+                        <option value="one">اختر من القائمة</option>
+                        <option value="two">النوع</option>
+                        <option value="three">النوع</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form_group">
+                    <label class="required">المدينة</label>
+                    <div class="position_r">
+                      <i class="las la-angle-down angle_select"></i>
+                      <select class="select_input" name="city">
+                        <option value="one">اختر من القائمة</option>
+                        <option value="two">المدينة</option>
+                        <option value="three">المدينة</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form_group">
+                    <label class="required"> كلمة المرور </label>
+                    <div class="input_parant">
+                      <input type="password" class="password_change">
+                      <span>
+                        <button class="btn_gh btn_show_pass">
+                          <i class="las la-eye"></i>
+                        </button>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="form_group">
+                    <label class="required">تأكيد كلمة المرور</label>
+                    <div class="input_parant">
+                      <span>
+                        <button class="btn_gh btn_show_pass" type="submit">
+                          <i class="las la-eye classi"></i>
+                        </button>
+                      </span>
+                      <input type="password" class="password_change">
+      
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="step">
+                <div class="group-input">
+                  <div class="form_group">
+                    <label class="required"> اسم البنك</label>
+                    <input type="text">
+                  </div>
+                  <div class="form_group">
+                    <label class="required"> اسم الحساب</label>
+                    <input type="text">
+                  </div>
+                  <div class="form_group">
+                    <label class="required"> رقم iban</label>
+                    <div class="input_parant">
+                      <input type="number">
+                    </div>
+                  </div>
+                  <div class="form_group">
+                    <label class="required"> رقم الحساب</label>
+                    <div class="input_parant">
+                      <input type="number">
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="form_group">
-              <label class="required"> الاسم بالكامل</label>
-              <input type="text">
-            </div>
-            <div class="form_group">
-              <label class="required"> رقم الجوال</label>
-              <div class="input_parant">
-                <input type="number" placeholder="5xxxxxxxx">
-                <span>
-                  996+
-                  <img src="images/lang-login.png" alt="">
-                </span>
+            <div class="wizard-footer">
+              <div class="Conditions" id="wizard-condition" style="display: none">
+                الضغط على زر تسجيل يعني موافقتك على
+                <a href="#" class="anc_Condition anc_gh">الشروط والأحكام</a>
+                الخاصة بالمتجر
+              </div>
+              <div class="wizard-btn-cont">
+                <button
+                  id="wizard-prev"
+                  style="display: none"
+                  type="button"
+                  class="btn btn-irv btn-irv-default btn_gh btn_register effects_2"
+                >
+                  السابق
+                </button>
+                <button id="wizard-next" type="button" class="btn btn-irv btn_gh btn_register effects_2">
+                  التالي
+                </button>
+                <button
+                  id="wizard-subm"
+                  style="display: none"
+                  type="button"
+                  class="btn btn-irv btn_gh btn_register effects_2"
+                >
+                  تسجيل
+                </button>
               </div>
             </div>
-            <div class="form_group">
-              <label class="required"> البريد الإلكتروني</label>
-              <input type="text">
-            </div>
-            <div class="form_group">
-              <label class="required">النوع</label>
-              <div class="position_r">
-                <i class="las la-angle-down angle_select"></i>
-                <select class="select_input select2-gender" name="gender">
-                  <option value="one">اختر من القائمة</option>
-                  <option value="two">النوع</option>
-                  <option value="three">النوع</option>
-                </select>
-              </div>
-            </div>
-            <div class="form_group">
-              <label class="required">المدينة</label>
-              <div class="position_r">
-                <i class="las la-angle-down angle_select"></i>
-                <select class="select_input" name="city">
-                  <option value="one">اختر من القائمة</option>
-                  <option value="two">المدينة</option>
-                  <option value="three">المدينة</option>
-                </select>
-              </div>
-            </div>
-            <div class="form_group">
-              <label class="required"> كلمة المرور </label>
-              <div class="input_parant">
-                <input type="password" class="password_change">
-                <span>
-                  <button class="btn_gh btn_show_pass">
-                    <i class="las la-eye"></i>
-                  </button>
-                </span>
-              </div>
-            </div>
-            <div class="form_group">
-              <label class="required">تأكيد كلمة المرور</label>
-              <div class="input_parant">
-                <span>
-                  <button class="btn_gh btn_show_pass" type="submit">
-                    <i class="las la-eye classi"></i>
-                  </button>
-                </span>
-                <input type="password" class="password_change">
-
-              </div>
-            </div>
-          </div>
-          <div class="Conditions">
-            الضغط على زر تسجيل يعني موافقتك على
-            <a href="#" class="anc_Condition anc_gh">الشروط والأحكام</a>
-            الخاصة بالمتجر
-          </div>
-          <button class="btn_gh btn_register effects_2">تسجيل</button>
-        </form>
+          </form>
+        </div>
       </div>
     </div>
   </section>
