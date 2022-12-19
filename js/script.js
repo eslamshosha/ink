@@ -108,11 +108,16 @@ $(document).ready(function () {
         ? fixedBar.classList.add("fixsedt")
         : fixedBar.classList.remove("fixsedt"),
         (prevScrollpos = o);
+        if (prevScrollpos == 00) {
+          $(".input-serch-div-parant").slideDown("500");
+          $(".btn-search-mobile .la-search").removeClass("la-times");
+        } else {
+          $(".input-serch-div-parant").slideUp("500") ;
+        }
     }),
       document.documentElement.style.setProperty("--animate-duration", ".5s");
     // ~~~~~~~~~~~~~~~
   }
-
   ///quantity
   jQuery(document).ready(($) => {
     $(".quantity").on("click", ".plus", function (e) {
@@ -148,6 +153,7 @@ $(document).ready(function () {
     $(this).children().children(".bar--horizontal").toggleClass("is-active");
   });
   // ~~~~~~~~~~~~~~~
+  
 });
 
 // ~~~~~~~~~~~~~~preload~~~~~~~~~~~~~~
@@ -346,6 +352,35 @@ show_pass.addEventListener("click", function (e) {
     e_block.style.display = "block";
     e_none.style.display = "none";
   }
+});
+
+
+
+function readURL(input, imgControlName) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      $(imgControlName).attr('src', e.target.result);
+    }
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+$("#customUpload").change(function() {
+  // add your logic to decide which image control you'll use
+  var imgControlName = "#ImgPreview5";
+  readURL(this, imgControlName);
+  $('.preview5').addClass('it');
+  $('.btn-rmv').addClass('rmv');
+  $('.upload-text').addClass('hide-text');
+});
+
+$("#removeImage5").click(function(e) {
+  e.preventDefault();
+  $("#customUpload").val("");
+  $("#ImgPreview5").attr("src", "");
+  $('.preview5').removeClass('it');
+  $('.btn-rmv').removeClass('rmv');
+  $('.upload-text').removeClass('hide-text');
 });
 // ~~~~~~~~~~wow.js
 new WOW().init();
